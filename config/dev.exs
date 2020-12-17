@@ -5,7 +5,7 @@ config :trello_tasker, TrelloTasker.Repo,
   username: "postgres",
   password: "postgres",
   database: "trello_tasker_dev",
-  hostname: "localhost",
+  hostname: System.get_env("DB_HOST"),
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
