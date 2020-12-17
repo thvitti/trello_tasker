@@ -1,5 +1,16 @@
 /* This file is for your main application css. */
 
+$bg-color: #fff;
+
+$detail-color: #ffe9ce;
+$detail-color-2: #4e51bf;
+$detail-color-3: #24252a;
+$detail-color-4: #ff92a4;
+$error-color: #a94442;
+$gradient-detail: linear-gradient(-45deg, $detail-color, $bg-color);
+
+@import "global";
+@import "card/index";
 @import "../node_modules/nprogress/nprogress.css";
 
 /* LiveView specific classes for your customizations */
@@ -8,23 +19,23 @@
 //   display: block;
 //   margin: -1rem 0 2rem;
 // }
-
+//
 // .phx-no-feedback.invalid-feedback, .phx-no-feedback .invalid-feedback {
 //   display: none;
 // }
-
+//
 // .phx-click-loading {
 //   opacity: 0.5;
 //   transition: opacity 1s ease-out;
 // }
-
+//
 // .phx-disconnected{
 //   cursor: wait;
 // }
 // .phx-disconnected *{
 //   pointer-events: none;
 // }
-
+//
 // .phx-modal {
 //   opacity: 1!important;
 //   position: fixed;
@@ -37,7 +48,7 @@
 //   background-color: rgb(0,0,0);
 //   background-color: rgba(0,0,0,0.4);
 // }
-
+//
 // .phx-modal-content {
 //   background-color: #fefefe;
 //   margin: 15% auto;
@@ -45,22 +56,22 @@
 //   border: 1px solid #888;
 //   width: 80%;
 // }
-
+//
 // .phx-modal-close {
 //   color: #aaa;
 //   float: right;
 //   font-size: 28px;
 //   font-weight: bold;
 // }
-
+//
 // .phx-modal-close:hover,
 // .phx-modal-close:focus {
 //   color: black;
 //   text-decoration: none;
 //   cursor: pointer;
 // }
-
-
+//
+//
 // /* Alerts and form errors */
 // .alert {
 //   padding: 15px;
