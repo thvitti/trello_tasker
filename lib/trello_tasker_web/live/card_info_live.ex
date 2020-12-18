@@ -1,4 +1,4 @@
-defmodule TrelloTaskerWeb.CardLive do
+defmodule TrelloTaskerWeb.CardInfoLive do
   use TrelloTaskerWeb, :live_view
 
   alias Phoenix.View
@@ -11,7 +11,7 @@ defmodule TrelloTaskerWeb.CardLive do
 
   @impl true
   def render(assigns) do
-    View.render(CardView, "index.html", assigns)
+    View.render(CardView, "info.html", assigns)
   end
 
 end

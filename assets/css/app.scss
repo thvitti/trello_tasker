@@ -10,7 +10,8 @@ $error-color: #a94442;
 $gradient-detail: linear-gradient(-45deg, $detail-color, $bg-color);
 
 @import "global";
-@import "card/index";
+@import "card/index/index";
+@import "card/info/info";
 @import "../node_modules/nprogress/nprogress.css";
 
 /* LiveView specific classes for your customizations */

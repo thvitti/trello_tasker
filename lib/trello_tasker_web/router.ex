@@ -18,6 +18,7 @@ defmodule TrelloTaskerWeb.Router do
     pipe_through :browser
 
     live "/", CardLive, :index
+    live "/card/:id", CardInfoLive, :index
   end
 
   # Other scopes may use custom stacks.
