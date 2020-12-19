@@ -1,29 +1,41 @@
 <section class="card-info">
     <header>
-      <img src="https://cdn.iconscout.com/icon/free/png-512/erlang-1-1175171.png" alt="Logo Erlang">
+      <img src="<%= @info.image %>"
+           alt="<%= @info.name %>">
       <div>
-        <strong>Tarefa de Aprender Erlang</strong>
-        <p>Descricao de todos os topicos iniciais para aprender o basico do linguagem</p>
+        <strong><%= @info.name %></strong>
+        <p><%= @info.description %></p>
       </div>
     </header>
 
     <ul>
       <li>
         <span>
-          <i class="fa fa-clock-o"></i>
-          18-dez-2020
+          <i class="fa fa-clock-o <%= @info.delivery_date && (Date.compare(Date.utc_today(), @info.delivery_date ) && !@info.completed && "is-late" ) %> "></i>
+          <%= @info.delivery_date || "Not informed" %>
+
         </span>
       </li>
       <li>
         <span>
           <i class="fa fa-check-circle-o"></i>
-          Done
+          <%= @info.completed && "Done" || "In Progress" %>
         </span>
       </li>
     </ul>
 </section>
 
   <div class="comments">
+    <%= for comment <- @comments do %>
+    <a href="#">
+      <div>
+        <strong><%= comment.user %></strong>
+        <p><%= comment.text %></p>
+      </div>
+      <i class="fa fa-caret-right"></i>
+    </a>
+    <% end %>
+
     <a href="#">
 
 
