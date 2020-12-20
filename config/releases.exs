@@ -18,6 +18,9 @@ secret_key_base =
     environment variable SECRET_KEY_BASE is missing.
     You can generate one by calling: mix phx.gen.secret
     """
+ config :trello_tasker, :trello,
+      key: System.get_env("TRELLO_KEY"),
+      token: System.get_env("TRELLO_TOKEN")
 
 config :trello_tasker, TrelloTaskerWeb.Endpoint,
   http: [
